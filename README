@@ -1,0 +1,34 @@
+Code challenge - operazioni CRUD per la gestione di compagnie e dei loro relativi prodotti
+
+
+Le API sono state testate utilizzando Postman
+È stato integrato anche Swagger per visualizzare più facilmente le API con la sua UI
+
+Nome DB: MVSNCHALLENGE
+
+Tabelle DB:
+Compagnie
+  ID  PK                  int
+  NomeCompagnia           nvarchar(50)
+  DescrizioneCompagnia    nvarchar(50)
+
+Prodotti
+  ID  PK                  int
+  NomeProdotto            nvarchar(50)
+  CategoriaMerceologica   nvarchar(50)
+  Quantita                int
+  IDCompagnia FK          int
+  
+Indirizzi
+  ID  PK                  int
+  Indirizzo               nvarchar(50)
+  Citta                   nvarchar(50)
+  InfoAggiuntive          nvarchar(max)
+  IDCompagnia FK          int
+
+Contatti
+  ID  PK                  int
+  Tipo                    nvarchar(50)
+  Contatto                nvarchar(50)
+  IDCompagnia FK          int
+  
